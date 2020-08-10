@@ -1,0 +1,106 @@
+#page-home {
+    background: url("../assets/icones/home-background.svg") no-repeat;
+    background-position: 35vw bottom;
+    height: 100vh;
+}
+
+
+#page-home .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /*em porcenteagem o conteúdo nesse caso vai sempre ficar com as proporções de 90% se fosse px seria um valor fixo*/
+    /*define o tamanho máximo que a tela irá parar de tomar as devidas proporções*/
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 90%;
+}
+
+#page-home .content header a {
+    color: var(--title-color);
+    display: flex;
+    font-weight: 700;
+    align-items: center
+    ;
+}
+
+#page-home header {
+    /*colocar os itens dentro de header um ao lado do outro*/
+    display: flex;
+    /*alinha os items do header ao centro verticamente*/
+    align-items: center;
+    /*justifico os itens dentro de header co espaços entre eles*/
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+#page-home .content header a span {
+    background-image: url("/assets/icones/log-in.svg");
+    display: flex;
+    height: 20px;
+    margin: 16px;
+    width: 20px;
+}
+
+#page-home .content main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    max-width: 560px;
+}
+
+#page-home .content main h1 {
+    font-size: 54px;
+}
+
+page-home main p {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home main a {
+    align-items: center;
+    background: var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+   /* font-weight: bold; retirado por causao strong no html*/
+    height: 72px;
+    margin-top: 40px;
+    max-width: 368px;
+    transition: 400ms;
+    width: 100%;
+}
+
+#page-home main a:hover {
+    background-color: #2fb86e;
+}
+
+#page-home main a span {
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.08);
+    /*tira a bordar que estava visível*/
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    justify-content: center;
+    height: 72px;
+    width: 72px;
+}
+
+/*criar pseudos elementos*/
+#page-home main a span::after{
+    /*criando um conteúdo vazio para ser adicionado a imagem*/
+    background-image: url(../assets/icones/search.svg);
+    content: "";
+    height: 20px;
+    width: 20px;
+
+}
+
+#page-home main a strong{
+    color: white;
+    flex: 1;
+    text-align: center;
+}

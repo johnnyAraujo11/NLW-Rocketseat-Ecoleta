@@ -1,0 +1,154 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+}
+
+#page-create-point header a{
+    align-items: center;
+    color: var(--title-color);
+    display:flex;
+    font-weight: bold;
+}
+
+#page-create-point header a span{
+    background-image: url('../assets/icones/arrow-left.svg');
+    display: flex;
+    height: 24px;
+    margin-right: 16px;
+    width: 20px;
+}
+
+form{
+    background-color: white;
+    border-radius: 8px;
+    /*Box-sizing representa que o tamanho da caixa vai ate o padding , ou seja, o padding estará incluido no tamanho da caixa*/
+    box-sizing:border-box;
+    padding: 64px;
+    margin: 80px auto;
+    /*O elemento form não vai mais crescer quando passar de 730px*/
+    max-width: 730px;
+}
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset{
+    margin-top: 64px;
+    border: 0;
+}
+
+form legend{
+    margin-bottom: 40px;
+}
+
+form legend h2{
+    font-size: 2    4px;
+}
+
+form .field{
+    display:flex;
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+form .field-group{
+    display: flex;
+}
+
+
+form select,
+form input{
+    background-color: #f0f0f5;  
+    border: 0;
+    border-radius: 8px;
+    font-size: 20px;
+    padding: 16px 24px;
+    /*outline: none; opcinal para quando o usuário clicar no input ele ficar selecionado identificando que foi clicado*/
+}
+
+form select{
+    /*retira as setas de estado e cidade assim só de clickar no input as opções aparecem */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+/*o estilo é referente ao segundo field que está logo em sequência*/
+form .field-group .field + .field{
+    margin-left: 24px;
+}
+
+form button{
+    background-color: var(--primary-color);
+    /*tirar a borda*/
+    border: 0;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 56px;
+    margin-top: 40px;
+    width: 260px;
+    /*Especifica a transição já que jo quero mudar o background, assim não há transição de load ou reload da página dos estilos acima*/
+    transition: background-color 500ms;
+}
+
+form button:hover{
+    background-color:#2fb86e;
+}
+
+.items-grid{
+    display: grid;
+    /*O gap sempara os elemtentos dentro do grid somente entrar os elemtnos não 'bordas'*/
+    gap: 16px;
+    /*defindo que terá 3 colunas de 200px cada*/
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.items-grid li{
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+    /*muda o curso para a mozinha quando passar por cima*/
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    height: 180px;
+    padding: 32px 18px 16px;
+}
+
+.items-grid li span{
+    align-items: center;
+    display: flex;
+    color: var(--title-color);
+    flex: 1;
+    margin-top: 12px;
+}
+
+.items-grid li.mouse-em-cima{
+        background-color: #e1faec;
+        border: 2px solid #34cb79;
+}
+
+/*faz com que o elemento não receba clique não podendo fazer interação com eles assim só o seu pai está habilitado a receber o clique nesse caso o li está*/
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none;
+}

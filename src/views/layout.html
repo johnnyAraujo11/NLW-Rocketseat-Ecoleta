@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+        <title>Ecoleta</title>
+    {% endblock title %}
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="styles/main.css">
+
+{% block styles %}
+
+{% endblock styles %} 
+
+    
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body>
+    <div id="{{bodyId}}">
+        <!--É bom deixar o código do html bem semântico para que seja possível que a leitura fique simples-->
+     {% block content %}
+     {% endblock content %}
+    </div>
+
+    {% block modal %}
+    {% endblock modal %}
+    
+    {% block scripts %}
+    {% endblock scripts %}
+</body>
+
+</html>

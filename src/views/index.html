@@ -1,0 +1,42 @@
+<!--herda do arquivo layout.html(aqui está substituindo alguns coisas que se repetem nos arquivos-->
+{% extends "layout.html" %}
+
+{% set bodyId = "page-home" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+{# id="page-home" #}
+{% block content %}
+    <div class="content">
+        <header>
+            <img src="/assets/icones/logo.svg">
+            <a href="/create-point">
+                <span></span>
+                Cadastre um ponto de coleta
+            </a>
+        </header>
+        <!--O main é usado quando algo que é importante, como o parte princial onde terão informações-->
+        <main>
+            <h1>Seu marketplace de coleta de resíduos</h1>
+
+            <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a>
+
+        </main>
+    </div>
+{% endblock content %}
+
+<!--É bom deixar o código do html bem semântico para que seja possível que a leitura fique simples-->
+{% block modal %}
+    {% include "partials/modal.html" %}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="/scripts/index.js"></script>
+{% endblock scripts %}

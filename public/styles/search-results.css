@@ -1,0 +1,84 @@
+body::after{
+    content: "";
+    background-color: white;
+    position: fixed;
+    top: 260px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+#page-search-results{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#page-search-results header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+}
+
+#page-search-results header a{
+    align-items: center;
+    color: var(--title-color);
+    display:flex;
+    font-weight: bold;
+}
+
+#page-search-results header a span{
+    background-image: url('../assets/icones/arrow-left.svg');
+    display: flex;
+    height: 24px;
+    margin-right: 16px;
+    width: 20px;
+}
+
+main {
+    margin-top: 48px;
+}
+
+main h4{
+    font-weight: norma;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 32px;
+}
+
+main .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+main .card img{
+    border-radius: 8px 8px 0 0;
+    height: 150px;
+    /*a imgagem cresce da uma espécie de zoom na imagem conforme muda a dimesão da página*/
+    object-fit: cover;
+    width: 100%;
+}
+
+main .card h1{
+    color: #322153;
+    font-size: 36px;
+    line-height: 41px;
+    margin: 32px 0 24px;
+}
+
+main .card h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 34px;
+    color: var(--primary-color);
+    margin: 24px 0; 
+}
+
+main .card p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #6C6C80;
+}
